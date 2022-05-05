@@ -151,6 +151,7 @@ button i {
 
 .multi-button {
   margin: auto;
+      width: 90%;
 }
 
 .multi-button:hover button {
@@ -179,10 +180,15 @@ button i {
 	align-items: center;
 }
 .social-links {
-	display: flex;
+	/* display: flex;
     justify-content: center;
     align-self: flex-end;
-    margin: 0 auto !important;
+    margin: 0 auto !important; */
+     position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .social-btn {

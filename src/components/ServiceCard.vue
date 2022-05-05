@@ -12,19 +12,19 @@ export default {
                     imgPath: "./api.png",
                     list: ["Socket.io", "Express.js", "PHP Laravel", "Mongo DB - SQL"]
                 },
-                 {
+                {
                     title: "Fullstack Development",
                     text: "I offer full development of your step into the online world. If you want to upload your business to the cloud or if you have an innovative idea.",
                     imgPath: "./web.png",
-                    list: ["HTML5/CSS","Vue.js","Angular"]
+                    list: ["HTML5/CSS", "Vue.js", "Angular"]
                 },
-                 {
+                {
                     title: "Hybrid Mobile App",
                     text: "I offer practical solutions for the creation of mobile applications that adapt to iOS and Android. I develop in javascript/typescript based environments like Ionic or React Native.",
                     imgPath: "./mobile.png",
-                    list: ["Ionic Angular v5","React Native"]
+                    list: ["Ionic Angular v5", "React Native"]
                 },
-                
+
             ]
         }
     }
@@ -38,13 +38,13 @@ export default {
 
         <div v-for="service in services" class="serviceCard">
             <img :src="service.imgPath" class="img">
-            <h2>{{service.title}}</h2>
-            <p class="card-text">{{service.text}}</p>
+            <h2>{{ service.title }}</h2>
+            <p class="card-text">{{ service.text }}</p>
             <ul style="text-align:start;">
-                <li v-for="item in service.list"> {{item}}</li>
+                <li v-for="item in service.list"> {{ item }}</li>
             </ul>
         </div>
-    
+
     </div>
 
 
@@ -55,12 +55,14 @@ h1 {
     width: 100%;
     font-size: clamp(1.5em, 5vw, 2.5em);
 }
+
 h2 {
     font-size: clamp(1em, 5vw, 1em);
 }
+
 .card-text {
-      text-overflow: ellipsis;
-      min-height: 175px;
+    text-overflow: ellipsis;
+    min-height: 175px;
     overflow: auto;
     text-align: start;
 }
@@ -72,7 +74,7 @@ h2 {
     flex-direction: row;
     flex-wrap: wrap;
     width: 90vw;
-    margin: auto;
+       margin: 0 auto;
 }
 
 .serviceCard {
@@ -93,29 +95,30 @@ h2 {
     margin: auto;
     object-fit: cover;
 }
+
 ul {
-  display: block;
-  margin-left: -10px;
+    display: block;
+    margin-left: -10px;
 }
 
 ul li {
-  display: block;
-  position: relative;
+    display: block;
+    position: relative;
 }
 
 ul li:not(:last-child) {
-  margin-bottom: 16px;
+    margin-bottom: 16px;
 }
 
 ul li:before {
-  content: "";
-  position: absolute;
-  top: 1.2em;
-  left: -30px;
-  margin-top: -.9em;
-  background: #00ADB5;
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
+    content: "";
+    position: absolute;
+    top: 1.2em;
+    left: -30px;
+    margin-top: -.9em;
+    background: #00ADB5;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
 }
 </style>
