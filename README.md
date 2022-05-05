@@ -2,10 +2,8 @@
  
 ## Installing
 
- ```npm i
-   ```
+ ```npm i```
    
 ## Running dev mode
 
-```npm run dev
-   ```
+```npm run dev```
