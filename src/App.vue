@@ -21,6 +21,9 @@ import ContactCard from './components/ContactCard.vue'
     <section id="services">
       <ServiceCard></ServiceCard>
     </section>
+     <section id="contact">
+      <ContactCard></ContactCard>
+    </section>
  
   </div>
 
@@ -57,6 +60,7 @@ section {
   text-align: center;
 
 }
+
 
 
 #app {
