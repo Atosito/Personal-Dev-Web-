@@ -38,7 +38,7 @@ export default {
       </button> -->
       <button><fa icon="suitcase" /> <span>Portfolio</span></button>
       <button @click="goto(2)"><fa icon="brain" /><span> Services</span></button>
-      <button><fa icon="envelope" /><span> Contact</span></button>
+      <button @click="goto(3)"><fa icon="envelope" /><span> Contact</span></button>
     </div>
   </div>
   <div class="social-links">
