@@ -1,0 +1,14 @@
+element {
+    --primary-color: #EEEEEE;
+    --secondary-color: #222831;
+    --terciary-color: #393E46;
+    --special-color: #00ADB5;
+  }
+
+  :root {
+    --primary-color: #EEEEEE;
+    --secondary-color: #222831;
+    --terciary-color: #393E46;
+    --special-color: #00ADB5;
+    font-family: "Poppins", sans-serif;
+  }

@@ -92,7 +92,7 @@ import SkillBarCard from './SkillBarCard.vue'
 
 span {
     display: block;
-    color: #888888;
+    color: var(--terciary-color);
     font-size: 1rem;
     line-height: 1;
     margin-top: -10px;

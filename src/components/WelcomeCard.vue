@@ -127,19 +127,16 @@ export default {
 }
 
 h1 {
-  color: #00adb5;
-  font-family: "Poppins", sans-serif;
+  color: var(--special-color);
   font-size: 2em;
   line-height: 1.565;
   margin-bottom: 0;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
-  text-shadow: 0 0 6px rgb(0 0 0 / 20%);
 }
 
 h2 {
-  color: #eeeeee;
-  font-family: "Poppins", sans-serif;
+  color: var(--primary-color);
   font-size: 3em;
   line-height: 1.071;
   max-width: 900px;
@@ -157,7 +154,7 @@ h3 {
   line-height: 2.4rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  color: #d3d3d3;
+  color: var(--primary-color);
   text-shadow: 0 0 6px rgb(0 0 0 / 20%);
 }
 
@@ -166,7 +163,7 @@ button {
   padding: 0.5em 1em;
   background: #fff;
   font-family: "Poppins", sans-serif;
-  color: #393e46;
+  color: var(--terciary-color);
   border: 0px solid #a0aec0;
   margin: 0.1em;
   transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease,
@@ -198,8 +195,8 @@ button i {
 }
 
 .multi-button:hover button:hover {
-  background: #00adb5;
-  color: #fff;
+  background-color: var(--special-color);
+  color: var(--primary-color);
   box-shadow: 0 0 0.8em 0 rgb(0, 173, 181, 0.8);
   transform: translateY(-0.2em);
 }
@@ -238,7 +235,7 @@ button i {
   color: #333;
   border-radius: 10px;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-  background: white;
+  background-color:var(--primary-color);
   margin: 5px;
   transition: 1s;
 }

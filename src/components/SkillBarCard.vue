@@ -78,7 +78,7 @@ export default {
 <style scoped>
 .skill-bars {
     width: 100%;
-    background: #fff;
+    background-color: white;
 
 }
 
@@ -100,16 +100,8 @@ export default {
     font-size: 1rem;
     opacity: 1;
     font-weight: bold;
-    /* animation: showText 0.5s 1s linear forwards; */
-
 }
 
-
-/* @keyframes showText {
-    100% {
-        opacity: 1;
-    }
-} */
 
 .skill-bars .bar .progress-line {
     height: 10px;
@@ -122,11 +114,6 @@ export default {
         0 1px rgba(255, 255, 255, 0.8);
     transform: scaleX(0);
     transform-origin: left;
-
-    /* transform: scaleX(0);
-    transform-origin: left;
-    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards; */
-
 
 }
 
@@ -147,7 +134,7 @@ export default {
     position: absolute;
     border-radius: 10px;
 
-    background: #00ADB5;
+   background-color: var(--special-color);
 
 }
 

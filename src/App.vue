@@ -33,6 +33,14 @@ import ContactCard from './components/ContactCard.vue'
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@500;700&display=swap');
 
 
+
+element {
+    --primary-color: #EEEEEE;
+    --secondary-color: #222831;
+    --terciary-color: #393E46;
+    --special-color: #00ADB5;
+  }
+
 .flex-container{
     display: flex;
     flex-direction: column;
@@ -67,62 +75,10 @@ section {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: var(--secondary-color);
 
 }
 
-/* #contact {
-    width: 100vw;
-  min-height: 100vh;
-
-  display: table;
-  position: relative;
-  margin:0
-}
-#profile {
-  width: 100vw;
-  min-height: 100vh;
-
-  display: table;
-  position: relative;
-  text-align: center;
-}
-
-#services {
-  width: 100vw;
-  min-height: 100vh;
-
-  display: table;
-  position: relative;
-  text-align: center;
-  
-}
-
-#intro {
-
-  background: url("/background3.jpg") no-repeat center bottom;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed;
-  width: 100vw;
-  min-height: 100vh;
-  display: table;
-  position: relative;
-  text-align: center;
-
-
-}
-
-
-
-/* html{
-   background: url("/background.jpg") no-repeat center center fixed ;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-} */
 body {
   margin: 0 !important;
 }
