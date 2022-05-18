@@ -76,8 +76,7 @@ h2 {
   flex: 0 1 24%;
   padding: 2em;
   margin-bottom: 1.5em;
-  -webkit-box-shadow: 18px 17px 104px -24px rgb(0 0 0 / 10%);
-  box-shadow: 18px 17px 104px -24px rgb(0 0 0 / 10%);
+  box-shadow: -1px 15px 30px -12px rgba(50, 50, 50, 0.2);
 }
 
 .img {

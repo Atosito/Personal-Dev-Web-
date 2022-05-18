@@ -5,6 +5,7 @@ import WelcomeCard from './components/WelcomeCard.vue'
 import ProfileCard from './components/ProfileCard.vue'
 import ServiceCard from './components/ServiceCard.vue'
 import ContactCard from './components/ContactCard.vue'
+import PortfolioCard from './components/PortfolioCard.vue'
 
 
 
@@ -18,9 +19,13 @@ import ContactCard from './components/ContactCard.vue'
     <section id="profile">
       <ProfileCard></ProfileCard>
     </section>
+     <section id="portfolio">
+      <PortfolioCard></PortfolioCard>
+    </section>
     <section id="services">
       <ServiceCard></ServiceCard>
     </section>
+
      <section id="contact">
       <ContactCard></ContactCard>
     </section>
@@ -65,6 +70,10 @@ section {
    text-align: center;
 }
 #services {
+  text-align: center;
+
+}
+#portfolio {
   text-align: center;
 
 }
