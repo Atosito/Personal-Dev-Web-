@@ -89,7 +89,8 @@ h1 {
   background-size: cover;
   border-radius: 19px;
   box-shadow: -1px 15px 30px -12px rgba(50, 50, 50, 0.2);
-  transition: all 1s ease;
+  transition: all 1s
+   ease;
   position: relative;
   overflow: hidden;
   text-decoration: none;

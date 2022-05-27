@@ -1,23 +1,136 @@
 <script>
+import { ref } from "vue";
+import axios from "axios";
+import Toast from "../components/UI/Toast.vue";
 export default {
   name: "ContactCard",
   props: {},
+  components: { Toast },
   data() {
-    return {};
+    return {
+      name: "",
+      email: "",
+      message: "",
+      showToast: false,
+      toastMessage: "",
+      toastStatus: "",
+      sendClicked: false,
+    };
+  },
+  computed: {
+    emailValidator() {
+      if (this.email.length == 0 && !this.sendClicked) {
+        return "default";
+        console.log("aqui");
+      }
+
+      if (/(.+)@(.+){2,}.(.+){2,}/.test(this.email)) {
+        return "valid";
+      } else {
+        return "invalid";
+      }
+    },
+    nameValidator() {
+      if (this.name.length == 0 && !this.sendClicked) {
+        return "default";
+      }
+
+      if (this.name.length > 1) {
+        return "valid";
+      } else {
+        return "invalid";
+      }
+    },
+    msgValidator() {
+      if (this.message.length == 0 && !this.sendClicked) {
+        return "default";
+      }
+
+      if (this.message.length > 5) {
+        return "textareavalid";
+      } else {
+        return "textareainvalid";
+      }
+    },
+  },
+  methods: {
+    onReset() {
+      this.name = "";
+      this.email = "";
+      this.message = "";
+    },
+    submit() {
+      const self = this;
+      this.sendClicked = true;
+      const { name, email, message } = this;
+
+      this.nameValid = name.length > 0;
+      this.emailValid = /(.+)@(.+){2,}.(.+){2,}/.test(email);
+      this.msgValid = message.length > 5;
+
+      if (!this.nameValid || !this.emailValid || !this.msgValid) {
+        //show toast
+        console.log("no se puede enviar");
+        return;
+      }
+
+      axios
+        .post("https://tgonz.work/send", {
+          email: email,
+          name: name,
+          message: message,
+        })
+        .then(function (response) {
+          self.openToast("Email has been sent correctly. Thanks", "success");
+        })
+        .catch(function (error) {
+          console.log(error);
+          self.openToast(
+            "Sorry for the inconvenience. Server under maintenance. If you still want to contact me you can send me an e-mail to gonzaltomas@gmail.com",
+            "error"
+          );
+        });
+    },
+    openToast(text, status) {
+      console.log(text)
+      this.toastMessage = text;
+      this.toastStatus = status;
+      this.showToast = true;
+      setTimeout(() => (this.showToast = false), 3000);
+    },
   },
 };
 </script>
 
 <template>
   <h1>CONTACT ME</h1>
-  <form class="form">
+  <transition name="toast">
+    <Toast :text="toastMessage" :status="toastStatus" v-if="showToast" />
+  </transition>
+
+  <form @submit.prevent="submit" @reset="onReset" class="form">
     <!-- <h2>CONTACT ME</h2> -->
-    <p type="Name:"><input placeholder="Your Name" /></p>
-    <p type="Email:"><input type="email" placeholder="email@yourcompany.com" /></p>
-    <p type="Message:"><textarea placeholder="Your Message"></textarea></p>
+    <p type="Name:">
+      <input v-bind:class="nameValidator" v-model="name" placeholder="Your Name" />
+    </p>
+    <p type="Email:">
+      <input
+        v-bind:class="emailValidator"
+        v-model="email"
+        type="email"
+        placeholder="email@yourcompany.com"
+      />
+    </p>
+    <p type="Message:">
+      <textarea
+        v-bind:class="msgValidator"
+        v-model="message"
+        placeholder="Your Message"
+      ></textarea>
+    </p>
 
     <div class="multi-button">
-      <button><fa icon="road" /> Send Message</button>
+      <button type="submit"><fa icon="road" /> Send Message</button>
     </div>
   </form>
 </template>
@@ -97,6 +210,25 @@ input:focus {
   border-bottom: 2px solid #00adb5;
 }
 
+.default {
+  border-bottom: 2px solid #bebed2;
+}
+
+.valid {
+  border-bottom: 2px solid #06c012;
+}
+
+.invalid {
+  border-bottom: 2px solid #c30303;
+}
+
+.textareavalid {
+  border: 2px solid #06c012;
+}
+.textareainvalid {
+  border: 2px solid #c30303;
+}
+
 p:before {
   content: attr(type);
   display: block;
@@ -149,6 +281,30 @@ button i {
 
 .multi-button {
   text-align: center !important;
+}
+
+.toast-enter-from {
+  opacity: 0;
+  transform: translateY(-60px);
+}
+/* .toast-enter-to {
+    opacity: 1;
+    transform: translateY(0);
+  } */
+.toast-enter-active {
+  transition: all 0.3s ease;
+}
+/* leave transitions */
+/* .toast-leave-from {
+    opacity: 1;
+    transform: translateY(0);
+  } */
+.toast-leave-to {
+  opacity: 0;
+  transform: translateY(-60px);
+}
+.toast-leave-active {
+  transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 980px) {
