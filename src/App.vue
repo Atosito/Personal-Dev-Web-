@@ -12,6 +12,7 @@ import PortfolioCard from './components/PortfolioCard.vue'
 </script>
 
 <template>
+
   <div class="flex-container">
     <section id="intro">
       <WelcomeCard @scrollto="goto"></WelcomeCard>

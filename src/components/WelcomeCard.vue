@@ -278,7 +278,7 @@ button i {
     font-size: 0;
   }
   button {
-    font-size: 24px;
+    font-size: 16px;
   }
 
   .social-links {
