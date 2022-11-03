@@ -20,13 +20,16 @@ export default {
           styleImg: {
             height: "600px",
             width: "700px",
+            "object-fit":"cover"
           },
           tags: ["Express.js", "Vue 2.0", "BootstrapVue", "MongoDB"],
-          buttons: [{
-            icon:"play",
-            url:"https://tgonz.work/hispana",
-            text:"Demo"
-          }]
+          buttons: [
+            {
+              icon: "play",
+              url: "https://tgonz.work/hispana",
+              text: "Demo",
+            },
+          ],
         },
         {
           title: "Visiona",
@@ -44,15 +47,18 @@ export default {
           },
           images: ["./visiona_1.PNG", "./visionax1.png", "./visiona_3.PNG"],
           tags: ["Ionic", "Angular", "CSS", "HTML", "PHP Laravel", "MySQL"],
-           buttons: [{
-            icon:"store",
-            url:"http://visiona.app.com/",
-            text:"Apple Store"
-          },{
-            icon:"store",
-            url:"https://play.google.com/store/apps/details?id=visiona.app",
-            text:"Play Store"
-          },]
+          buttons: [
+            {
+              icon: "store",
+              url: "http://visiona.app.com/",
+              text: "Apple Store",
+            },
+            {
+              icon: "store",
+              url: "https://play.google.com/store/apps/details?id=visiona.app",
+              text: "Play Store",
+            },
+          ],
         },
         {
           title: "Al Instante",
@@ -70,6 +76,56 @@ export default {
           },
           images: ["./serv_ya_1.png", "./serv_ya_2.png", "./serv_ya_3.png"],
           tags: ["Ionic", "Angular", "CSS", "HTML", "PHP Laravel", "MySQL"],
+        },
+        {
+          title: "Screen Recorder",
+          date: "Jul 2022",
+          modal: false,
+          text:
+            "Chrome extension capable to capture and record screen and user microphone.",
+          styleObject: {
+            "background-image":
+              'linear-gradient(rgba(105,105,105,0.7), rgba(105,105,105,0.7)),url("./screen_capture.png")',
+          },
+          styleImg: {
+            height: "700px",
+            width: "800px",
+           "object-fit":"cover"
+          },
+          images: ["./screen_capture.png"],
+          tags: ["Typescript", "Vue 3.0", "Vite"],
+          buttons: [
+            {
+              icon: "github",
+              url: "https://github.com/Atosito/Screen-Recorder",
+              text: "Github",
+            },
+          ],
+        },
+         {
+          title: "Estudio Dax",
+          date: "Jul 2022",
+          modal: false,
+          text:
+            "Web client and admin for a law firm. E-commerce",
+          styleObject: {
+            "background-image":
+              'linear-gradient(rgba(105,105,105,0.7), rgba(105,105,105,0.7)),url("./estudiodax.JPG")',
+          },
+          styleImg: {
+            height: "600px",
+            width: "700px",
+           "object-fit":"cover"
+          },
+          images: ["./estudiodax.JPG","./estudiodax_1.JPG"],
+          tags: ["PHP", "SQL", "Ajax", "HTML"],
+          buttons: [
+            {
+              icon: "play",
+              url: "https://estudiodax.com.ar/",
+              text: "Estudio DAX",
+            },
+          ],
         },
       ],
     };
@@ -115,7 +171,9 @@ export default {
               <img v-for="img in job.images" :style="job.styleImg" :src="img" />
             </div>
             <div class="multi-button">
-              <button v-for="btn in job.buttons" @click="open(btn.url)"><fa :icon="btn.icon" /> <span> {{btn.text}}</span></button>
+              <button v-for="btn in job.buttons" @click="open(btn.url)">
+                <fa :icon="btn.icon" /> <span> {{ btn.text }}</span>
+              </button>
             </div>
           </dialog>
         </transition>
@@ -146,9 +204,8 @@ button {
     transform 0.2s ease;
   box-shadow: 0 0 0 #bee3f8;
   transform: translateY(0);
-   border-radius: 0.5em ;
+  border-radius: 0.5em;
 }
-
 
 button i {
   color: #a0aec0;

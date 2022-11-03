@@ -7,12 +7,8 @@ export default {
   },
   computed: {},
   methods: {
-    goto(num) {
-      window.scrollTo({
-        top: window.innerHeight * num,
-        left: 0,
-        behavior: "smooth",
-      });
+    goto(id) {
+      document.getElementById(id).scrollIntoView({behavior: 'smooth'});
     },
     open(url) {
       window.open(url, "_blank");
@@ -31,14 +27,14 @@ export default {
     <h2>I'm Tomás Gonzalez</h2>
     <h3>| FullStack-Developer | Mobile-Developer |</h3>
     <div class="multi-button">
-      <button><fa icon="road" /> <span> Experiencie </span></button>
-      <button @click="goto(1)"><fa icon="user" /><span> Profile</span></button>
+      <!-- <button><fa icon="road" /> <span> Experiencie </span></button> -->
+      <button @click="goto('profile')"><fa icon="user" /><span> Profile</span></button>
       <!-- <button>
         <fa icon="school" /> Education
       </button> -->
-      <button @click="goto(2)"><fa icon="suitcase" /> <span>Portfolio</span></button>
-      <button @click="goto(3)"><fa icon="brain" /><span> Services</span></button>
-      <button @click="goto(4)"><fa icon="envelope" /><span> Contact</span></button>
+      <button @click="goto('portfolio')"><fa icon="suitcase" /> <span>Portfolio</span></button>
+      <button @click="goto('services')"><fa icon="brain" /><span> Services</span></button>
+      <button @click="goto('contact')"><fa icon="envelope" /><span> Contact</span></button>
     </div>
   </div>
   <div class="social-links">
