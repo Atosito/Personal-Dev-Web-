@@ -1,41 +1,13 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import WelcomeCard from './components/WelcomeCard.vue'
-import ProfileCard from './components/ProfileCard.vue'
-import ServiceCard from './components/ServiceCard.vue'
-import TutorialsCard from './components/TutorialsCard.vue'
-import ContactCard from './components/ContactCard.vue'
-import PortfolioCard from './components/PortfolioCard.vue'
-
-
 
 </script>
 
 <template>
 
-  <div class="flex-container">
-    <section id="intro">
-      <WelcomeCard @scrollto="goto"></WelcomeCard>
-    </section>
-    <section id="profile">
-      <ProfileCard></ProfileCard>
-    </section>
-     <section id="portfolio">
-      <PortfolioCard></PortfolioCard>
-    </section>
-    <!-- <section id="tutorials">
-      <TutorialsCard></TutorialsCard>
-    </section> -->
-    <section id="services">
-      <ServiceCard></ServiceCard>
-    </section>
-
-     <section id="contact">
-      <ContactCard></ContactCard>
-    </section>
  
-  </div>
+hola
 
 </template>
 

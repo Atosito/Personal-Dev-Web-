@@ -24,9 +24,9 @@ import PortfolioCard from './components/PortfolioCard.vue'
      <section id="portfolio">
       <PortfolioCard></PortfolioCard>
     </section>
-    <!-- <section id="tutorials">
+    <section id="tutorials">
       <TutorialsCard></TutorialsCard>
-    </section> -->
+    </section>
     <section id="services">
       <ServiceCard></ServiceCard>
     </section>

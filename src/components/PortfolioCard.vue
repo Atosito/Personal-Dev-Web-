@@ -8,6 +8,48 @@ export default {
 
       jobs: [
         {
+          
+          title: "BoxyShop",
+          modal: false,
+          date: "Nov 2022 - Present",
+          text: "E-commerce based on product's price of Amazon.com",
+          images: ["./boxy_admin_dashboard.png", "./boxy_login_admin.png"],
+          styleObject: {
+            "background-image":
+              'linear-gradient(rgba(105,105,105,0.5), rgba(105,105,105,0.5)), url("./boxy_admin_dashboard.png")',
+          },
+          styleImg: {
+            height: "600px",
+            width: "700px",
+            "object-fit":"cover"
+          },
+          buttons: [
+            {
+              icon: "play",
+              url: "https://boxyshop.com.ar",
+              text: "Website",
+            },
+          ],
+          tags: ["Express.js", "Sequelize", "Mysql", "Jest"],
+        },
+        {
+          
+          title: "Scraper Amazon.com",
+          modal: false,
+          date: "Nov 2022 - Present",
+          text: "Scraper capable of obtain: product, stock, price, variants, rating from amazon.com.",
+          images: ["./boxy_scraper.png"],
+          styleObject: {
+            "background-image":
+              'linear-gradient(rgba(105,105,105,0.5), rgba(105,105,105,0.5)), url("./boxy_scraper.png")',
+          },
+          styleImg: {
+            height: "600px",
+            width: "700px"
+          },
+          tags: ["Typescript", "Express.js", "MongoDB", "Cheerio"],
+        },
+        {
           title: "Hispana Obras",
           modal: false,
           date: "Oct 2020 - Dec 2020",
